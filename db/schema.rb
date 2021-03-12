@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_031657) do
+ActiveRecord::Schema.define(version: 2021_03_12_032551) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "blog_posts", force: :cascade do |t|
-    t.string "title"
-    t.string "text"
+  create_table "blog_post_tags", force: :cascade do |t|
+    t.integer "blog_post_id"
+    t.integer "tag_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "post_tags", force: :cascade do |t|
-    t.integer "blog_post_id"
-    t.integer "tag_id"
+  create_table "blog_posts", force: :cascade do |t|
+    t.string "title"
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
