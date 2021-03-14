@@ -1,0 +1,6 @@
+{
+  id: blog_post.id,
+  title: blog_post.title,
+  text: blog_post.text,
+  tags: blog_post.tag_names
+}
